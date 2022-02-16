@@ -414,6 +414,7 @@ async function getWorkflowPath(): Promise<string> {
       run_id,
     }
   );
+  console.log(runsResponse);
   const workflowUrl = runsResponse.data.workflow_url;
 
   const workflowResponse = await apiClient.request(`GET ${workflowUrl}`);

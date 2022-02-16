@@ -32,6 +32,7 @@ export const getApiClient = function (
   apiDetails: GitHubApiCombinedDetails,
   { allowExternal = false } = {}
 ) {
+  console.trace("Here I am!");
   const auth =
     (allowExternal && apiDetails.externalRepoAuth) || apiDetails.auth;
   const retryingOctokit = githubUtils.GitHub.plugin(retry.retry);
